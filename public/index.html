@@ -91,7 +91,7 @@
           <div id="user_div" class="loggedin-div container table-bordered shadow ">
             <img src="imagens/user.png" alt="user" width="40px" style="margin: 10px">
             <h3>Olá, seja bem vindo!</h3>
-            <p id="user_para">Bem vindo ao cadastro top das galáxias, agora você está logado!</p>
+            <p id="user_para">Você está logado agora, seu amail aparecerá aqui em breve...</p>
             <button onclick="logout()" class="main-botao btn btn-lg" style="margin-right: 30px">Sign out</button>
             <button class="btn btn-primary btn-lg" onclick="add()"><i class="fas fa-plus-circle"></i>  Começar</button>
             <br><hr>
@@ -102,16 +102,7 @@
             <br><br>
           </div>
           <br><br>
-          <!--Div centralizada Loading--> 
-          <div class="row">
-              <div style="margin: 0 auto;">
-                  <div class="col-xs-12">
-                      <img src='imagens/loading.gif' id='loader'/>
-                  </div>
-              </div>
-          </div>               
-          <script>setTimeout(function(){ loader.style.display='none'; },1500);</script>
-          <!--Div centralizada Loading-->
+         
           <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
           <script>
             var config = {

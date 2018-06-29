@@ -45,7 +45,7 @@ function create_account(){
     var userPass = document.getElementById("password_field").value;
     
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-    window.location.href ='index.html';
+    
         // Handle Errors here.
         
         var errorCode = error.code;
