@@ -19,10 +19,13 @@
         <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
         <script src="assets/js/config.js"></script>
         <script src="assets/js/AppList.js"></script>
+        
+        
 
         <title>Lista de despesas</title>
     </head>
     <body onload="RetornarDespesas()">
+        
         <div class="content">
           <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #f5f5f5; border-bottom: solid 1px #ccc; padding: 30px">
           <a class="navbar-brand" href="#"><img src="imagens/marca_UEG_vertical_extenso_cromia.png" width="100px"></a>
@@ -102,8 +105,21 @@
                       <th scope="col">Editar</th>
                       <th scope="col">Excluir</th>
                     </tr>
-                  </thead>         
-                </table> 
+                  </thead>  
+                        
+                </table>
+                <!--Div centralizada Loading--> 
+                <div class="row">
+                    <div style="margin: 0 auto;">
+                        <div class="col-xs-12">
+                            <img src='imagens/loading.gif' id='loader'/>
+                        </div>
+                    </div>
+                </div>               
+                <script>setTimeout(function(){ loader.style.display='none'; },1500);</script>
+                <!--Div centralizada Loading-->  
+
+                
                 
                   <div class="shadow p-3 mb-5 bg-white rounded" id="somaTotal" style="font-size:20px">
                     <strong style="color:rgb(13, 53, 26)">Valor total em despesas<br><hr>R$</strong></div>
@@ -115,6 +131,7 @@
             </div>
           </div>
         </div>
+        
 
         <!-- FOOTER -->
         <div style="padding-top: 60px; padding-top: 120px; padding-bottom: 30px; background-color: rgb(25, 18, 53)">
@@ -125,6 +142,11 @@
               <p>&copy; CopyRight-2018 Matheus Vieira, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
           </footer>
         </div>
+        
         <script src="assets/js/login.js"></script>
+        
+          
+          </script>
+        
     </body>
 </html>

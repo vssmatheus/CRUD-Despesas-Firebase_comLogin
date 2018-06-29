@@ -3,15 +3,19 @@ function RetornarDespesas(){
     var conteudo = `<tbody>`;    
     var somaTotal = 0;
     var list  = db.database()
+   
+    
         .ref('minhasdespesas').on('value',function(res){
             var i=0;
             res.forEach(function(item){                
                 console.log(item.val());
+                
                 conteudo += `<tr>
                 
                 <td>`+item.val().description+`</td>
                 <td>R$ `+item.val().amount+`</td> 
                 <td>`+item.val().dateAdd+`</td>
+                
                 <td><button data-toggle="modal" data-target="#exampleModal" value="exampleModal" onclick="editRow(`+i+`)" class="btn btn-primary"><i class="fa fa-edit title="Editar"></i>  Editar</button></td>
                 <td><button value="Delete" onclick="deleteRow(`+i+`)" id="btnDelete" class="btn btn-danger"><i class="fas fa-trash title="Excluir"></i>  Excluir</button></td>
                                 
@@ -19,17 +23,22 @@ function RetornarDespesas(){
                 i++;               
 
                 somaTotal+= Number(item.val().amount);
+                
             })
             conteudo +=`</tbody>`;
             document.getElementById("somaTotal")
                         .innerHTML += ' '+somaTotal;
             
 
-
+                        
             $("#tbResultado").append(conteudo);
+            
            
         });
+        
+        
 }
+
 function deleteRow(x){
     this.x = x;
     var elem = [];

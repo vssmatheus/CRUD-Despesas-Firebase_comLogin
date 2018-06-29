@@ -22,6 +22,7 @@
 
     </head>
     <body>
+         
         <div class="content">
           <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #f5f5f5; border-bottom: solid 1px #ccc; padding: 30px">
             <a class="navbar-brand" href="#">
@@ -76,7 +77,11 @@
                   <a href="registro.html" style="text-decoration:none">
                     <button class="btn btn-lg">Cadastre-se</button>
                   </a>
-                  <br>
+                  <center>
+                    <br>
+                    <p class="container">&copy;2018</p>
+                  </center>
+                  
                 </div>
               </div>
             </div>
@@ -92,12 +97,21 @@
             <br><hr>
             <p>Agora você pode cadastrar suas despesas neste site e obter controle de suas finanças</p>
             <br>
-            <a href="#"><img src="imagens/git.png" alt="git" width="180px" style="margin:2px"></a>
+            <a href="https://github.com/vssmatheus/CRUD-Despesas-Firebase_comLogin"><img src="imagens/git.png" alt="git" width="180px" style="margin:2px"></a>
             <h5>Codigo fonte do projeto no GitHub</h5>
             <br><br>
           </div>
           <br><br>
-        
+          <!--Div centralizada Loading--> 
+          <div class="row">
+              <div style="margin: 0 auto;">
+                  <div class="col-xs-12">
+                      <img src='imagens/loading.gif' id='loader'/>
+                  </div>
+              </div>
+          </div>               
+          <script>setTimeout(function(){ loader.style.display='none'; },1500);</script>
+          <!--Div centralizada Loading-->
           <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
           <script>
             var config = {
