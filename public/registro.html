@@ -12,26 +12,35 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </head>
 <body>
-        <center><div class="card text-center" id="card-login">
-                <div class="card-header">
-                  <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html">LOGIN</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="registro.html">REGISTRO</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                        <center><h3>REGISTRO</h3></center>
-                        <div id="login_div" class="main-div">
-                                <input type="email" placeholder="Email para cadastro..." id="email_field"/>
-                                <input type="password" placeholder="Senha para cadastro..." id="password_field"/>
-                                <button class="registrar" onclick="create_account()">REGISTRAR</button>
-                            </div>
-                </div>
-              </div></center>
+    
+  <div class="container">
+    <div class="card container shadow contenedor-form col-xs-8 col-sm-4 col-md-4" 
+     width="2%" id="card-login">
+      
+      <div class="card-body">
+        <center>
+          <div><img src="imagens/user-plus.png" alt="user" width="80px" style="margin: 10px"></div>
+          <h3>cadastro</h3>
+        </center>
+        <div id="login_div" class="main-div">
+          <div class="form-group">
+            <label for="email_field"><strong>Email </strong></label>
+            <input type="email_field" class="form-control" placeholder="Digite seu Email..." id="email_field" />
+          </div>
+          <div class="form-group">
+            <label for="senha" class="flot-left"><strong>Senha</strong></label>
+            <input type="password" class="form-control" placeholder="Digite sua senha..." id="password_field" />
+          </div>
+          <hr>
+          <center>
+            <button class="registrar btn btn-success btn-block" onclick="create_account()">Cadastrar-se</button>
+          </center>
+          <br>
+          <button class="btn btn btn-light shadow"><a href="index.html"><div style="color: rgb(117, 117, 117)"><img src="imagens/back.png" alt="user" width="90px"></div></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 6eeffafa31bb273d0d2d071869a48df388b70de4
 function RetornarDespesas(){
     
     var conteudo = `<tbody>`;    
@@ -9,7 +5,6 @@ function RetornarDespesas(){
     var list  = db.database()
         .ref('minhasdespesas').on('value',function(res){
             var i=0;
-<<<<<<< HEAD
             res.forEach(function(item){                
                 console.log(item.val());
                 conteudo += `<tr>
@@ -23,17 +18,6 @@ function RetornarDespesas(){
                 </tr>`;
                 i++;               
 
-=======
-            res.forEach(function(item){
-                
-                console.log(item.val());
-                conteudo += `<tr>
-                <td>`+item.key+`</td>
-                <td>`+item.val().description+`</td>
-                <td>R$ `+item.val().amount+`</td>
-                <td>`+item.val().dateAdd+`</td>
-                </tr>`;
->>>>>>> 6eeffafa31bb273d0d2d071869a48df388b70de4
                 somaTotal+= Number(item.val().amount);
             })
             conteudo +=`</tbody>`;
@@ -45,7 +29,6 @@ function RetornarDespesas(){
             $("#tbResultado").append(conteudo);
            
         });
-<<<<<<< HEAD
 }
 function deleteRow(x){
     this.x = x;
@@ -61,10 +44,8 @@ function deleteRow(x){
     db.database().ref('minhasdespesas/'+elem[x]).remove();
     $("table").remove();
     path = "confirm.html";
-    redirecionamento(path);
+    
+    window.alert("Item Excluído");
     
 }
 // delete icon
-=======
-}
->>>>>>> 6eeffafa31bb273d0d2d071869a48df388b70de4

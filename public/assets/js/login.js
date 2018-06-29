@@ -40,11 +40,14 @@ function logout(){
 }
 
 function create_account(){
+    
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
-
+    
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    window.location.href ='index.html';
         // Handle Errors here.
+        
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
@@ -52,7 +55,10 @@ function create_account(){
         window.alert("Error: " + errorMessage)
         
       });
+      
 }
+
+//Estas funções não estão sento utilizadas
 function add(){
     window.location.href = 'paginaInicial.html'
 }

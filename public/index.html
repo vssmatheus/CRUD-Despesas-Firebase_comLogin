@@ -25,7 +25,7 @@
         <div class="content">
           <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #f5f5f5; border-bottom: solid 1px #ccc; padding: 30px">
             <a class="navbar-brand" href="#">
-              <img src="marca_UEG_vertical_extenso_cromia.png" width="100px">
+              <img src="imagens/marca_UEG_vertical_extenso_cromia.png" width="100px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -51,43 +51,49 @@
               </ul>
             </div>-->
           </nav>
-          <center>
-            <div class="card text-center" id="card-login">
-              <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">LOGIN</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="registro.html">REGISTRO</a>
-                  </li>
-                </ul>
-              </div>
+          <!--Todo o card de login-->
+          <div class="container">
+            <hr>
+            <div class="card container shadow contenedor-form col-xs-8 col-sm-4 col-md-4" 
+            id="card-login" width="2%">
               <div class="card-body">
                 <center>
+                  <div><img src="imagens/user.png" alt="user" width="80px" style="margin: 10px"></div>
                   <h3>Login</h3>
+                  <hr>
                 </center>
                 <div id="login_div" class="main-div form-signin" >
-                  <input type="email" class="form-control" placeholder="Digite seu Email..." id="email_field" />
-                  <input type="password" class="form-control" placeholder="Digite sua senha..." id="password_field" />
-                  <button onclick="login()" class="btn-primary">LOGIN</button>
-                  <a href="registro.html">
-                    <button class="btn">CRIE SUA CONTA</button>
+                  <div class="form-group">
+                    <label for="email_field"><strong>Email </strong></label>
+                    <input type="email_field" class="form-control" placeholder="Digite seu Email..." id="email_field" />
+                  </div>
+                  <div class="form-group">
+                    <label for="senha" class="flot-left"><strong>Senha</strong></label>
+                    <input type="password" class="form-control" placeholder="Digite sua senha..." id="password_field" />
+                  </div>
+                  <br>
+                  <button onclick="login()" class="btn btn-lg btn-primary">Sign in</button>
+                  <a href="registro.html" style="text-decoration:none">
+                    <button class="btn btn-lg">Cadastre-se</button>
                   </a>
+                  <br>
                 </div>
               </div>
             </div>
-          </center>
-          <br><br>
+          </div>
+          <!--Fim do card de login-->
+          <br>
           <div id="user_div" class="loggedin-div container table-bordered shadow ">
-            <img src="user.png" alt="user" width="40px" style="margin: 10px">
-            <h3>Bem vindo, !</h3>
+            <img src="imagens/user.png" alt="user" width="40px" style="margin: 10px">
+            <h3>Olá, seja bem vindo!</h3>
             <p id="user_para">Bem vindo ao cadastro top das galáxias, agora você está logado!</p>
-            <button onclick="logout()" class="main-botao btn btn-lg">Sign out</button>
-            <br><hr>
-            <p>Agora vo pode cadastrar sus despesas neste Site</p>
-            <h5></h5><i class="fas fa-arrow-circle-down"></i>Clique aqui para começar </h5><br><hr>
+            <button onclick="logout()" class="main-botao btn btn-lg" style="margin-right: 30px">Sign out</button>
             <button class="btn btn-primary btn-lg" onclick="add()"><i class="fas fa-plus-circle"></i>  Começar</button>
+            <br><hr>
+            <p>Agora você pode cadastrar suas despesas neste site e obter controle de suas finanças</p>
+            <br>
+            <a href="#"><img src="imagens/git.png" alt="git" width="180px" style="margin:2px"></a>
+            <h5>Codigo fonte do projeto no GitHub</h5>
             <br><br>
           </div>
           <br><br>
@@ -115,7 +121,7 @@
               <p class="float-block">
                 <a href="http://www.ueg.br" style="color: #ccc; text-decoration: none">
                   Site |
-                  <img src="marca_UEG_vertical_extenso_cromia_branco.png" width="80px">
+                  <img src="imagens/marca_UEG_vertical_extenso_cromia_branco.png" width="80px">
                 </a>
               </p>
               <p>&copy; 2018-2018 Matheus Vieira, Inc. &middot;
